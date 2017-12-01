@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.assg.basictfstyletransfer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/thumb_recycler_view"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/image_view_orig"
+            android:layout_gravity="center_horizontal"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/image_view_trans"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/thumb_recycler_view"/>
+
+    <Button
+        android:id="@+id/click_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click"
+        android:layout_above="@+id/thumb_recycler_view"
+        android:layout_centerHorizontal="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/thumb_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thumb_size"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
